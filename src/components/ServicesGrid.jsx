@@ -8,7 +8,7 @@ const services = [
     image: '/assets/image/practice-area/divorce-lawyer.jpeg',
     icon: <Users size={20} />,
     title: 'Divorce Lawyer',
-    slug: 'divorce-advocate-gurgaon-delhi-ncr',
+    slug: 'divorce-advocate-NCR',
     desc: 'The legal process of a divorce depends on the type of matrimonial issue. Expert representation for peaceful transitions.',
   },
   {
@@ -22,7 +22,7 @@ const services = [
     image: '/assets/image/practice-area/property-lawyers.jpeg',
     icon: <Building2 size={20} />,
     title: 'Property Lawyer (RERA)',
-    slug: 'best-property-lawyers-gurgaon-delhi-ncr',
+    slug: 'best-property-lawyers-NCR',
     desc: 'Esteemed legal services for Real Estate matters, resolving disputes and navigating RERA compliance efficiently.',
   },
   {
@@ -36,7 +36,7 @@ const services = [
     image: '/assets/image/practice-area/criminal-lawyer.jpeg',
     icon: <Shield size={20} />,
     title: 'Criminal Lawyer',
-    slug: 'best-criminal-lawyer-in-gurgaon',
+    slug: 'best-criminal-lawyer-in-NCR',
     desc: 'Commendable services and strategic solutions, ensuring your legal interests are safeguarded with unmatched proficiency.',
   },
   {

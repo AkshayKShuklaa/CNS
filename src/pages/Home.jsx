@@ -5,7 +5,6 @@ import Investments from '../components/Investments';
 import AboutUs from '../components/AboutUs';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
-import LatestNews from '../components/LatestNews';
 import Contact from '../components/Contact';
 
 const Home = () => {
@@ -17,7 +16,6 @@ const Home = () => {
       <AboutUs />
       <Testimonials />
       <FAQ />
-      <LatestNews />
       <Contact />
     </>
   );

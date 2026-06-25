@@ -11,19 +11,19 @@ const testimonials = [
   },
   {
     name: 'Suhani Sehgal',
-    text: "Thank you Vipin sir for all the help and support you gave us while fighting my sister's case. The case went in her favor, all thanks to your knowledge and efforts! Highly recommended!",
+    text: "Thank you Consult New Stream for all the help and support while fighting my sister's case. The case went in her favor, all thanks to your knowledge and efforts! Highly recommended!",
     rating: 5,
     avatar: '/assets/image/Gitanjali.jpg'
   },
   {
     name: 'Arun',
-    text: "I highly recommend Advocate Vipin Raina. He guided me through a tough phase with care and clarity. I truly appreciate everything he did for me.",
+    text: "I highly recommend Consult New Stream. They guided me through a tough phase with care and clarity. I truly appreciate everything they did for me.",
     rating: 5,
     avatar: '/assets/image/suresh.png'
   },
   {
     name: 'Priyanka Borah',
-    text: "Working with Advocate Vipin Raina truly made a difference during one of the most challenging times in my life. From our very first meeting, he combined expert legal counsel with genuine empathy, offering not just guidance but a sense of calm that made the entire process much easier to navigate.",
+    text: "Working with Consult New Stream truly made a difference during one of the most challenging times in my life. From our very first meeting, they combined expert legal counsel with genuine empathy, offering not just guidance but a sense of calm that made the entire process much easier to navigate.",
     rating: 5,
     avatar: '/assets/image/rekha.jpeg'
   }

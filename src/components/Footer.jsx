@@ -50,11 +50,15 @@ const Footer = () => {
           >
             <h4 className="text-white font-serif font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'Practice Area', 'Judgements', 'Blogs', 'Our Team', 'Contact Us'].map((link, idx) => (
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'Portfolio', href: '/portfolio' },
+                { name: 'Admin Login', href: '/login' }
+              ].map((link, idx) => (
                 <li key={idx}>
-                  <Link to={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' ', '-')}`} className="text-slate-400 hover:text-teal-400 transition-colors flex items-center gap-2 group text-sm">
+                  <Link to={link.href} className="text-slate-400 hover:text-teal-400 transition-colors flex items-center gap-2 group text-sm">
                     <ArrowRight size={14} className="text-teal-500/0 group-hover:text-teal-400 -translate-x-2 group-hover:translate-x-0 transition-all" />
-                    {link}
+                    {link.name}
                   </Link>
                 </li>
               ))}

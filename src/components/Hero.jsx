@@ -4,7 +4,7 @@ import { Shield, Scale, ChevronRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 sm:pt-32 md:pt-40 lg:pt-24 pb-12">
       <div className="absolute inset-0 bg-navy-900">
         {/* Background Image */}
         <div className="absolute inset-0 bg-[url('/assets/image/bannerimage1.jpg')] bg-cover bg-center opacity-30 mix-blend-luminosity" />

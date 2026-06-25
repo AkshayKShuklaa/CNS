@@ -8,9 +8,8 @@ import BackgroundEffect from './components/BackgroundEffect';
 import Home from './pages/Home';
 import PracticeArea from './pages/PracticeArea';
 
-import OurTeam from './pages/OurTeam';
-import Judgements from './pages/Judgements';
-import Blogs from './pages/Blogs';
+import Portfolio from './pages/Portfolio';
+import Login from './pages/Login';
 import JoinOurTeam from './pages/JoinOurTeam';
 
 export default function App() {
@@ -22,9 +21,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/practice/:slug" element={<PracticeArea />} />
-          <Route path="/our-team" element={<OurTeam />} />
-          <Route path="/judgements" element={<Judgements />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/join-our-team" element={<JoinOurTeam />} />
         </Routes>
       </main>

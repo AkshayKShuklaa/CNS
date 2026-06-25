@@ -20,16 +20,16 @@ const faqs = [
     a: "Our business hours are Monday to Sunday: 10:00 AM - 9:00 PM."
   },
   {
-    q: "How to Find the Best Divorce Lawyers in Delhi and Gurgaon Court?",
-    a: "Getting a divorce lawyer in Delhi and following through with all legal procedures can be draining. You need a person who knows the legal processes and requirements. A specialized lawyer from VR Associates will have the experience to fix the issue efficiently and offer you a clear portrait of the circumstance."
+    q: "How to Find the Best Divorce Lawyers in NCR Court?",
+    a: "Getting a divorce lawyer in NCR and following through with all legal procedures can be draining. You need a person who knows the legal processes and requirements. A specialized lawyer from VR Associates will have the experience to fix the issue efficiently and offer you a clear portrait of the circumstance."
   },
   {
-    q: "What is the procedure for mutual consent divorce in Gurgaon Delhi NCR?",
+    q: "What is the procedure for mutual consent divorce in NCR?",
     a: "Step 1- First motion necessitates the joint petition filing. Step 2- Wife and husband appear before the court to record their declarations. Step 3- The court inspects their appeal and documents, refers for mediation, and records statements. The court then passes the order on the first motion. Later, the judge grants permission to file for the second motion."
   },
   {
     q: "Who is the best divorce lawyer near me?",
-    a: "VR Associates Law Firm provides the Best Divorce Lawyers in Delhi-NCR and has the best experienced legal practitioners specialising in Matrimonial Jurisprudence."
+    a: "VR Associates Law Firm provides the Best Divorce Lawyers in NCR and has the best experienced legal practitioners specialising in Matrimonial Jurisprudence."
   }
 ];
 
