@@ -2,75 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Edit2, Trash2, LogOut, Upload, Image as ImageIcon, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
-const defaultPortfolio = [
-  {
-    id: '1',
-    title: "Rajnesh v. Neha (AIR 2020 SC)",
-    text: "AIR 2020 SC, Criminal Appeal No. 730 of 2020, decided on 04 November 2020. This landmark judgement sets guidelines on alimony and maintenance in matrimonial disputes.",
-    imageUrl: "/admin/upload/judgement/661095809.png"
-  },
-  {
-    id: '2',
-    title: "Gaurav Nagpal v. Sumedha Nagpal",
-    text: "AIR 2009 SC 557, Civil Appeal No. 4359 of 2002. An essential precedent regarding child custody rights in Indian family law.",
-    imageUrl: "/admin/upload/judgement/601894520.webp"
-  },
-  {
-    id: '3',
-    title: "Vineeta Sharma v. Rakesh Sharma",
-    text: "AIR 2020 SC 3717, Civil Appeal No. 32601 of 2018. A milestone ruling establishing coparcenary rights for daughters in Hindu Undivided Family property.",
-    imageUrl: "/admin/upload/judgement/1442967649.webp"
-  },
-  {
-    id: '4',
-    title: "Smt. Seema v. Ashwani Kumar",
-    text: "AIR 2006 SC 1158, Writ Petition (Civil) No. 291 of 2005. The Supreme Court ruling that made registration of marriages compulsory in India.",
-    imageUrl: "/admin/upload/judgement/1522889100.webp"
-  },
-  {
-    id: '5',
-    title: "Indra Sarma v. V.K.V. Sarma",
-    text: "AIR 2013 SC 3096, Criminal Appeal No. 2009 of 2013. A key decision on live-in relationships and protection under the Domestic Violence Act.",
-    imageUrl: "/admin/upload/judgement/1543310096.webp"
-  },
-  {
-    id: '6',
-    title: "Shilpa Sailesh v. Varun Sreenivasan",
-    text: "AIR 2023 SC 2495, Civil Appeal No. 498 of 2015. Landmark ruling allowing the Supreme Court to grant divorce directly under Article 142 on the ground of irretrievable breakdown.",
-    imageUrl: "/admin/upload/judgement/1474778962.webp"
-  },
-  {
-    id: '7',
-    title: "Shayara Bano v. Union of India",
-    text: "AIR 2017 SC 4609, Writ Petition (Civil) No. 118 of 2016. The historic judgement declaring the practice of Triple Talaq (Talaq-e-biddat) unconstitutional.",
-    imageUrl: "/admin/upload/judgement/444068797.webp"
-  },
-  {
-    id: '8',
-    title: "Samar Ghosh v. Jaya Ghosh",
-    text: "AIR 2007 SC 3146, Civil Appeal No. 151 of 2004. Significant ruling outlining grounds and examples of mental cruelty in divorce proceedings.",
-    imageUrl: "/admin/upload/judgement/965533667.webp"
-  },
-  {
-    id: '9',
-    title: "Naveen Kohli v. Neelu Kohli",
-    text: "AIR 2006 SC 1675, Civil Appeal No. 2791 of 2005. Landmark ruling discussing the irretrievable breakdown of marriage as a key factor in divorce cases.",
-    imageUrl: "/admin/upload/judgement/59042934.webp"
-  },
-  {
-    id: '10',
-    title: "Sarla Mudgal v. Union of India",
-    text: "AIR 1995 SC 1531, Writ Petition (Civil) No. 347 of 1990. Important ruling on conflict of personal laws and bigamy under the Indian Penal Code.",
-    imageUrl: "/admin/upload/judgement/810388111.webp"
-  },
-  {
-    id: '11',
-    title: "Mohd. Ahmed Khan v. Shah Bano Begum",
-    text: "AIR 1985 SC 945, Criminal Appeal No. 103 of 1981. Groundbreaking judgment upholding the right of maintenance for divorced Muslim women under Section 125 CrPC.",
-    imageUrl: "/admin/upload/judgement/868819378.webp"
-  }
-];
+import defaultPortfolio from '../data/portfolioData.json';
 
 const Portfolio = () => {
   const [items, setItems] = useState([]);
@@ -127,6 +59,26 @@ const Portfolio = () => {
   const saveItems = (updatedItems) => {
     localStorage.setItem('portfolioItems', JSON.stringify(updatedItems));
     setItems(updatedItems);
+
+    // Save directly to the local database file if running in Vite dev mode
+    if (import.meta.env.DEV) {
+      fetch('/api/save-portfolio', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedItems)
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          console.log('Portfolio changes written to source database portfolioData.json successfully.');
+        } else {
+          console.error('Failed to write changes to source database:', data.error);
+        }
+      })
+      .catch(err => {
+        console.error('Error writing to source database:', err);
+      });
+    }
   };
 
   const handleLogout = () => {
