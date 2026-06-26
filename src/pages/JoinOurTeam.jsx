@@ -75,7 +75,7 @@ const Page = () => {
               transition={{ delay: 0.2 }}
               className="text-slate-400 text-base md:text-lg"
             >
-              We are open to welcoming lawyers, paralegals, and legal professionals.
+              We are open to welcoming Financial Advisors, lawyers, paralegals, and legal professionals.
             </motion.p>
           </div>
 

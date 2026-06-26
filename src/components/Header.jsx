@@ -23,6 +23,7 @@ const Header = () => {
     { name: 'Investments', href: '/#investments' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Join Our Team', href: '/join-our-team' },
+    { name: 'Terms', href: '/terms-and-conditions' },
     { name: 'Contact', href: '/#contact' },
   ];
 
@@ -84,7 +85,7 @@ const Header = () => {
             {/* Other links */}
             {navLinks.slice(1).map((link) => (
               <li key={link.name}>
-                {link.href.startsWith('/') && !link.href.includes('#') ? (
+                {link.href.startsWith('/') ? (
                   <Link
                     to={link.href}
                     className="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors tracking-wide"
@@ -151,7 +152,7 @@ const Header = () => {
                 </li>
                 {navLinks.slice(1).map((link) => (
                   <li key={link.name}>
-                    {link.href.startsWith('/') && !link.href.includes('#') ? (
+                    {link.href.startsWith('/') ? (
                       <Link
                         to={link.href}
                         onClick={() => setIsOpen(false)}

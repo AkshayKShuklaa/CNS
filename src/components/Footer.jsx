@@ -127,7 +127,7 @@ const Footer = () => {
           </p>
           <div className="flex gap-6 text-sm text-slate-500">
             <Link to="#" className="hover:text-teal-400 transition-colors">Privacy Policy</Link>
-            <Link to="#" className="hover:text-teal-400 transition-colors">Terms of Service</Link>
+            <Link to="/terms-and-conditions" className="hover:text-teal-400 transition-colors">Terms & Conditions</Link>
           </div>
         </motion.div>
       </div>
