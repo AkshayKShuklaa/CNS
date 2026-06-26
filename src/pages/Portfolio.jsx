@@ -97,8 +97,18 @@ const Portfolio = () => {
       try {
         const parsed = JSON.parse(stored);
         const sanitized = parsed.map(item => {
-          if (item.imageUrl && !item.imageUrl.startsWith('/') && !item.imageUrl.startsWith('http') && !item.imageUrl.startsWith('data:')) {
-            return { ...item, imageUrl: '/' + item.imageUrl };
+          let url = item.imageUrl || '';
+          if (url && !url.startsWith('http') && !url.startsWith('data:')) {
+            // Strip out leading slashes and dots to normalize
+            let clean = url.replace(/^[./]+/, '');
+            
+            // If it is missing the admin prefix, prepend it
+            if (clean.startsWith('upload/')) {
+              clean = 'admin/' + clean;
+            }
+            
+            // Prepend leading slash for absolute resolving
+            return { ...item, imageUrl: '/' + clean };
           }
           return item;
         });
