@@ -94,7 +94,20 @@ const Portfolio = () => {
     // Load portfolio items
     const stored = localStorage.getItem('portfolioItems');
     if (stored) {
-      setItems(JSON.parse(stored));
+      try {
+        const parsed = JSON.parse(stored);
+        const sanitized = parsed.map(item => {
+          if (item.imageUrl && !item.imageUrl.startsWith('/') && !item.imageUrl.startsWith('http') && !item.imageUrl.startsWith('data:')) {
+            return { ...item, imageUrl: '/' + item.imageUrl };
+          }
+          return item;
+        });
+        setItems(sanitized);
+        localStorage.setItem('portfolioItems', JSON.stringify(sanitized));
+      } catch (e) {
+        localStorage.setItem('portfolioItems', JSON.stringify(defaultPortfolio));
+        setItems(defaultPortfolio);
+      }
     } else {
       localStorage.setItem('portfolioItems', JSON.stringify(defaultPortfolio));
       setItems(defaultPortfolio);
