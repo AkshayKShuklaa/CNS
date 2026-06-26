@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import BackgroundEffect from './components/BackgroundEffect';
+import WhatsAppButton from './components/WhatsAppButton';
 
 // Pages
 import Home from './pages/Home';
@@ -16,6 +17,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden bg-navy-900 font-sans text-slate-300 relative">
       <BackgroundEffect />
+      <WhatsAppButton />
       <Header />
       <main className="flex-grow">
         <Routes>

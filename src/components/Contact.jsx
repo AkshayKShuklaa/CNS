@@ -29,7 +29,7 @@ const Contact = () => {
               
               <div className="w-full h-48 rounded-xl overflow-hidden shadow-lg mb-2 relative z-10">
                 <div className="absolute inset-0 bg-navy-900/40 mix-blend-multiply z-10 group-hover:bg-transparent transition-colors duration-500" />
-                <img src="/assets/image/fillaform.jpg" alt="Contact CNS" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src="/assets/image/connect-us.jpg" alt="Contact CNS" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
 
               <div className="relative z-10">
