@@ -152,3 +152,12 @@ button {
   line-height: 1.4 !important;
 }
 
+/* Scroll target offset for sticky header */
+#investments, #contact, #services, #home {
+  scroll-margin-top: 80px;
+}
+@media (min-width: 768px) {
+  #investments, #contact, #services, #home {
+    scroll-margin-top: 110px;
+  }
+}

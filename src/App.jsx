@@ -27,6 +27,8 @@ function ScrollToHash() {
         }, 100);
         return () => clearTimeout(timer);
       }
+    } else {
+      window.scrollTo(0, 0);
     }
   }, [pathname, hash]);
 
